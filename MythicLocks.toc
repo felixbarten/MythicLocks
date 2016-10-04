@@ -1,0 +1,7 @@
+## Interface: 70000
+## Title: MythicLocks
+## Author: Felix Barten
+
+## Description: Shows an overview of the Legion Dungeons a character is locked to.
+
+MythicLocks.lua
