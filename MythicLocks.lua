@@ -44,9 +44,15 @@ function DisplayLocks(saved)
 		end
 		
 	end 
-	print("You are not saved to the following Mythic dungeons:")	
+	print("You are eligible for the following ", tableLength(InstanceNames), " Mythic Dungeons")	
 	for k,v in pairs(InstanceNames) do 
-		print ("You are not locked to: |cFF00FF00",v)
+		print ("You are not saved in: |cFF00FF00",v)
 	end
 	
+end
+
+function tableLength(T)
+	local count = 0
+	for _ in pairs(T) do count = count + 1 end
+	return count
 end

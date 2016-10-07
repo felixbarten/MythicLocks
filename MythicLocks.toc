@@ -1,7 +1,14 @@
 ## Interface: 70000
+## X-Curse-Packaged-Version: 1.0
+## X-Curse-Project-Name: MythicLocks
+## X-Curse-Project-ID: mythiclocks
+
+
 ## Title: MythicLocks
 ## Author: Felix Barten
 
-## Description: Shows an overview of the Legion Dungeons a character is locked to.
+## Notes: Shows an overview of the Legion Dungeons a character is locked to.
 
+
+## Core 
 MythicLocks.lua
