@@ -13,10 +13,8 @@ The addon can be used by issuing one of the following commands ingame: `/locks /
 ## Options
 
 The addon supports one option: "saved" if the addon is invoked `/locks saved` it will also show the user which Mythic dungeons they are locked to. 
-<<<<<<< HEAD
 
 ## Curse
 
 This addon is also available on the Curse [mods platform](https://mods.curse.com/addons/wow/mythiclocks)
-=======
->>>>>>> decd5852f710a645fc07cb44739ec44d875aa6f8
+
