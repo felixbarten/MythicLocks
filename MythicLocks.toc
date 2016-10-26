@@ -1,5 +1,5 @@
-## Interface: 70000
-## X-Curse-Packaged-Version: 1.0
+## Interface: 710000
+## X-Curse-Packaged-Version: 1.0.1
 ## X-Curse-Project-Name: MythicLocks
 ## X-Curse-Project-ID: mythiclocks
 

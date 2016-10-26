@@ -2,7 +2,7 @@ local InstanceNames = {"Assault on Violet Hold",
  "Black Rook Hold", "Eye of Azshara", "The Arcway",
  "Court of Stars", "Neltharion's Lair", 
  "Maw of Souls", "Halls of Valor", 
- "Darkheart Thicket", "Vault of the Wardens"}
+ "Darkheart Thicket", "Vault of the Wardens", "Return to Karazhan"}
 
 SavedOption = false
  
