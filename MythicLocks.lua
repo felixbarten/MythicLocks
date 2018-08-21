@@ -14,21 +14,19 @@ local LegionInstanceNames = {
 	"Seat of the Triumvirate"
 }
 
- local DefaultInstanceNames = {
-	 "The Underrot",
-	 "The MOTHERLODE!!",
-	 "Shrine of the Storm",
-	 "Freehold",
-	 "Atal'Dazar",
-	 "Waycrest Manor",
-	 "Siege of Boralis",
-	 "Tol Dazor",
-	 "Kings' Rest",
-	 "Temple of Sethraliss",
- }
-
+local DefaultInstanceNames = {
+	"The Underrot",
+	"The MOTHERLODE!!",
+	"Shrine of the Storm",
+	"Freehold",
+	"Atal'Dazar",
+	"Waycrest Manor",
+	"Siege of Boralus",
+	"Tol Dagor",
+	"Kings' Rest",
+	"Temple of Sethraliss",
+}
 SavedOption = false
- 
  
 SLASH_MYTHICLOCKS1, SLASH_MYTHICLOCKS2, SLASH_MYTHICLOCKS3 = '/mlock', '/mythiclocks', '/locks';
 local function handler(msg, editbox)
@@ -39,12 +37,12 @@ local function handler(msg, editbox)
 	end
 
 	if string.find(msg, 'legion') then
-		expansion = 'legion'
+		expansion = 'legion';
 	end 
 	print(msg);
 
 	DisplayLocks(saved, expansion);
- end
+end
 SlashCmdList["MYTHICLOCKS"] = handler; 
  
  
