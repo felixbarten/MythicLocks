@@ -32,8 +32,7 @@ local function handler(msg, editbox)
 	if string.find(msg, 'legion') then
 		expansion = 'legion';
 	end 
-	print(msg);
-
+	
 	DisplayLocks(saved, expansion);
 end
 SlashCmdList["MYTHICLOCKS"] = handler; 
@@ -47,29 +46,37 @@ function DisplayLocks(saved, expansion)
 	end
 
 	for i =1, GetNumSavedInstances() do
-		local name, _, _, _, locked, extended, _, _, _, difficultyName, _, _
+		local name, id, reset, difficulty, locked, extended, _, _, _, _, _, _
 		 = GetSavedInstanceInfo(i)
 
-		if difficultyName == "Mythic" then
-			
+		if difficulty == 23 then
 			for k, v in pairs(instances) do 
-				if name == v then
+				if string.find(v, name) then
 					if locked == true then
-						-- if saved option
-						--print (SavedOption)
+						-- saved option
 						if saved == true then 
 							print("You are saved to: |cffff0000", v)
 						end
+						-- remove saved instances from copied instance table. 
 						table.remove(instances, k)
+						break
 					end 
 				end
 			end
 		end
-		
 	end 
-	print("You are eligible for the following ", tableLength(instances), " Mythic Dungeons")	
-	for k,v in pairs(instances) do 
-		print ("You are not saved in: |cFF00FF00",v)
+	PrintAvailableDungeons(instances);
+end
+
+function PrintAvailableDungeons(instances) 
+	-- if there are no more instances in the table all dungeons must have been cleared.
+	if #instances == 0 then
+		print( "|cFF00FF00 You have completed all Mythic dungeons for the week!")
+	else 
+		print("You are eligible for the following ", #instances, " Mythic Dungeons")	
+		for k,v in pairs(instances) do 
+			print ("You are not saved in: |cFF00FF00",v)
+		end
 	end
 end
 
@@ -82,12 +89,6 @@ function SelectExpansion(expansion)
 		instanceTable = deepcopy(DefaultInstanceNames)
 	end 
 	return instanceTable
-end
-
-function tableLength(T)
-	local count = 0
-	for _ in pairs(T) do count = count + 1 end
-	return count
 end
 
 -- Using deepcopy on our Table of dungeon names so subsequent executions of the addon don't break. 
